@@ -1,3 +1,2 @@
-hi my name is reuben, this is my first commit
-
-hi, my name is clarice
+COS30045 - Data Visualisation - Assignment 3
+Initial repository for team project
