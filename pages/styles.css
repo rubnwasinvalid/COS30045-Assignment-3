@@ -1,0 +1,101 @@
+:root {
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --bg: #ffffff;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 16px;
+  }
+  
+  h1 {
+    margin: 0 0 6px 0;
+    font-size: 32px;
+  }
+  
+  .sub {
+    margin: 0 0 14px 0;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0 4px 0;
+  }
+  
+  button {
+    border: 1px solid var(--border);
+    background: #f9fafb;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #f3f4f6;
+  }
+  
+  .hint {
+    color: var(--muted);
+    font-size: 13px;
+  }
+  
+  #chart {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 12px;
+    overflow-x: auto;
+    min-height: 120px;
+  }
+  
+  #chart svg {
+    display: block;
+  }
+  
+  .axis text {
+    font-size: 12px;
+  }
+  
+  .axis path, .axis line {
+    stroke: #cfd4dc;
+  }
+  
+  .tile {
+    stroke: rgba(0,0,0,0.08);
+    stroke-width: 1px;
+  }
+  
+  .tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: rgba(17, 24, 39, 0.92);
+    color: white;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 12.5px;
+    line-height: 1.35;
+    max-width: 280px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  
+  .footer {
+    margin-top: 18px;
+    color: #808080;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+  

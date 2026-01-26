@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="ABS Long-term Conditions Visualisation" />
+  <meta name="keywords" content="HTML, CSS, D3" />
+  <meta name="author" content="Reuben Lim" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ABS Long-term Conditions – Heatmap</title>
+
+  <!-- CSS is in the SAME folder (pages/) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+
+<body>
+  <header class="page">
+    <h1>ABS Long-term Conditions</h1>
+    <p class="sub">
+      Heatmap showing <strong>proportion</strong> of long-term conditions across <strong>age groups</strong>.
+      Hover a tile to see exact values.
+    </p>
+
+    <div class="controls">
+      <button id="sortBtn" type="button">Sort conditions by total (descending)</button>
+      <span class="hint">Sorting helps highlight the most prevalent conditions.</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <div id="chart"></div>
+  </main>
+
+  <footer class="page footer">
+    COS30045 Data Visualisation<br />
+    Reuben Lim | 103610729
+  </footer>
+
+  <script src="abs_script.js"></script>
+</body>
+</html>
