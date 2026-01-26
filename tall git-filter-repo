@@ -1,0 +1,11 @@
+[33mcommit 2c41f5301730bcb24063ffa62757df45da3e717e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Clarice Shim <cshim719@gmail.com>
+Date:   Mon Jan 26 20:12:22 2026 +1100
+
+    Remove large raw dataset and add gitignore
+
+[33mcommit 9a15015c4839bc63dcbd1894b31fd0b982f0b707[m
+Author: Clarice Shim <cshim719@gmail.com>
+Date:   Mon Jan 26 20:01:12 2026 +1100
+
+    raw dataset insert

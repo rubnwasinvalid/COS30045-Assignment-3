@@ -1,0 +1,49 @@
+age_group,condition_group,proportion
+0–14,neoplasms,0.1
+25–34,neoplasms,0.6
+45–54,neoplasms,1.2
+65 years and over,neoplasms,7.8
+0–14,diseases of the blood and blood forming organs,0.6
+25–34,diseases of the blood and blood forming organs,2.4
+45–54,diseases of the blood and blood forming organs,2.2
+65 years and over,diseases of the blood and blood forming organs,2.3
+0–14,"endocrine, nutritional and metabolic diseases",0.7
+25–34,"endocrine, nutritional and metabolic diseases",8.3
+45–54,"endocrine, nutritional and metabolic diseases",20
+65 years and over,"endocrine, nutritional and metabolic diseases",42.2
+0–14,mental and behavioural conditions,14.7
+25–34,mental and behavioural conditions,30.9
+45–54,mental and behavioural conditions,28.7
+65 years and over,mental and behavioural conditions,23.8
+0–14,diseases of the nervous system,1.3
+25–34,diseases of the nervous system,11.4
+45–54,diseases of the nervous system,12.9
+65 years and over,diseases of the nervous system,9.1
+0–14,diseases of the eye and adnexa,13.9
+25–34,diseases of the eye and adnexa,42.5
+45–54,diseases of the eye and adnexa,80.9
+65 years and over,diseases of the eye and adnexa,92.2
+0–14,diseases of the ear and mastoid,2.8
+25–34,diseases of the ear and mastoid,7.4
+45–54,diseases of the ear and mastoid,16.6
+65 years and over,diseases of the ear and mastoid,40.6
+0–14,diseases of the circulatory system,0.9
+25–34,diseases of the circulatory system,5.6
+45–54,diseases of the circulatory system,20.6
+65 years and over,diseases of the circulatory system,52.9
+0–14,diseases of the respiratory system,18.8
+25–34,diseases of the respiratory system,33.1
+45–54,diseases of the respiratory system,37.2
+65 years and over,diseases of the respiratory system,38
+0–14,diseases of the digestive system,1.1
+25–34,diseases of the digestive system,4.6
+45–54,diseases of the digestive system,9.9
+65 years and over,diseases of the digestive system,13.8
+0–14,diseases of the skin and subcutaneous tissue,4.1
+25–34,diseases of the skin and subcutaneous tissue,4.9
+45–54,diseases of the skin and subcutaneous tissue,4.5
+65 years and over,diseases of the skin and subcutaneous tissue,5
+0–14,diseases of the musculoskeletal system and connective tissue,1
+25–34,diseases of the musculoskeletal system and connective tissue,18.4
+45–54,diseases of the musculoskeletal system and connective tissue,34.6
+65 years and over,diseases of the musculoskeletal system and connective tissue,64
