@@ -12,7 +12,7 @@ function norm(s) {
 
 function cleanLabel(s) {
   return String(s ?? "")
-    .replace(/\([^)]*\)/g, "")   // remove footnotes like (a)
+    .replace(/\([^)]*\)/g, "")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -90,7 +90,7 @@ if (ageColIdx.length < 2) {
 // Data begins after header row
 const dataRows = aoa.slice(headerRowIdx + 1);
 
-// Allowlist the major “Total …” groups (matches your screenshots)
+// Allowlist the major “Total …” groups
 const ALLOW_TOTALS = [
   "Total neoplasms",
   "Total diseases of the blood and blood forming organs",
@@ -118,7 +118,7 @@ for (const row of dataRows) {
   const isAllowedTotal = ALLOW_TOTALS.some(t => norm(labelRaw) === norm(t));
   if (!isAllowedTotal) continue;
 
-  // Make a nicer group label (remove leading "Total ")
+  // Make a nicer group label
   const condition_group = labelRaw.replace(/^Total\s+/i, "").trim();
 
   for (const [age_group, idx] of ageColIdx) {

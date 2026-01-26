@@ -21,7 +21,6 @@ const rows = parsed.data;
 const headers = parsed.meta.fields ?? Object.keys(rows[0] ?? {});
 if (!headers.length) throw new Error("OECD CSV has no headers / is empty.");
 
-// Your file has these columns (from your screenshot):
 // REF_AREA, TIME_PERIOD, OBS_VALUE, MEASURE, UNIT_MEASURE, AGE, SEX, etc.
 if (!headers.includes("REF_AREA") || !headers.includes("TIME_PERIOD") || !headers.includes("OBS_VALUE")) {
   throw new Error(
