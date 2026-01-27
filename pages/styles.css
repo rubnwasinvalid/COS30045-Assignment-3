@@ -99,3 +99,10 @@
     padding-top: 14px;
   }
   
+  #chart svg {
+    color: #111827; /* affects stroke: currentColor */
+  }
+  
+  .point {
+    cursor: pointer;
+  }

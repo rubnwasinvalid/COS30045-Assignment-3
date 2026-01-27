@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="OECD Life Expectancy (Australia) Visualisation" />
+  <meta name="keywords" content="HTML, CSS, D3" />
+  <meta name="author" content="Reuben Lim" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OECD Life Expectancy (Australia)</title>
+
+  <!-- CSS is in the SAME folder (pages/) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+
+<body>
+  <header class="page">
+    <h1>OECD Life Expectancy (Australia)</h1>
+    <p class="sub">
+      Time-series line chart of <strong>life expectancy</strong> (value) by <strong>year</strong>.
+      Hover to see the exact value.
+    </p>
+  </header>
+
+  <main class="page">
+    <div id="chart"></div>
+  </main>
+
+  <footer class="page footer">
+    COS30045 Data Visualisation<br />
+    Reuben Lim & Clarice Shim | 103610729 & 102788227
+  </footer>
+
+  <!-- JS is in the SAME folder (pages/) -->
+  <script src="oecd_script.js"></script>
+</body>
+</html>
