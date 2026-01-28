@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="COS30045 Assignment 3 – Visualisations Home" />
+  <meta name="keywords" content="HTML, CSS, D3" />
+  <meta name="author" content="Reuben Lim & Clarice Shim" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment 3 – Visualisations</title>
+
+  <!-- Uses your existing pages/styles.css -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      background: #fff;
+      text-decoration: none;
+      color: var(--text);
+      display: block;
+    }
+    .card:hover {
+      background: #f9fafb;
+    }
+    .card h2 {
+      margin: 0 0 6px 0;
+      font-size: 18px;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.4;
+      font-size: 14px;
+    }
+    .tag {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f9fafb;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="page">
+    <h1>Assignment 3 – Visualisations</h1>
+    <p class="sub">
+      Home page linking to the two interactive D3 visualisations.
+    </p>
+  </header>
+
+  <main class="page">
+    <div class="cards">
+      <a class="card" href="abs_index.html">
+        <h2>ABS Long-term Conditions (Heatmap)</h2>
+        <p>
+          Matrix view of condition groups by age group, with colour encoding for proportion,
+          tooltip inspection, and sorting interaction.
+        </p>
+        <span class="tag">Heatmap + Tooltip + Sort</span>
+      </a>
+
+      <a class="card" href="oecd_index.html">
+        <h2>OECD Life Expectancy (Line Chart)</h2>
+        <p>
+          Time-series showing life expectancy trend over time, with point markers and
+          hover guideline + tooltip for precise values.
+        </p>
+        <span class="tag">Line Chart + Tooltip</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="page footer">
+    COS30045 Data Visualisation<br />
+    Reuben Lim & Clarice Shim| 103610729 & 102788227
+  </footer>
+</body>
+</html>
