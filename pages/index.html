@@ -2,89 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="COS30045 Assignment 3 – Visualisations Home" />
-  <meta name="keywords" content="HTML, CSS, D3" />
-  <meta name="author" content="Reuben Lim & Clarice Shim" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="COS30045 Assignment 3 - Visualisation Website" />
+  <meta name="author" content="Reuben Lim, Clarice Shim" />
   <title>Assignment 3 – Visualisations</title>
 
-  <!-- Uses your existing pages/styles.css -->
+  <!-- pages/ -> root -->
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin-top: 14px;
-    }
-    .card {
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px;
-      background: #fff;
-      text-decoration: none;
-      color: var(--text);
-      display: block;
-    }
-    .card:hover {
-      background: #f9fafb;
-    }
-    .card h2 {
-      margin: 0 0 6px 0;
-      font-size: 18px;
-    }
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.4;
-      font-size: 14px;
-    }
-    .tag {
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 12px;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #f9fafb;
-    }
-  </style>
 </head>
 
 <body>
-  <header class="page">
-    <h1>Assignment 3 – Visualisations</h1>
-    <p class="sub">
-      Home page linking to the two interactive D3 visualisations.
-    </p>
+  <!-- Top bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Home">
+        <span class="brand-badge">DV</span>
+        <span class="brand-text">
+          <strong>COS30045</strong>
+          <span>Assignment 3 — Visualisation Website</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link nav-link-active" href="./index.html">Home</a>
+        <a class="nav-link" href="./abs_index.html">ABS Heatmap</a>
+        <a class="nav-link" href="./oecd_index.html">OECD Line Chart</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="page">
-    <div class="cards">
-      <a class="card" href="abs_index.html">
-        <h2>ABS Long-term Conditions (Heatmap)</h2>
-        <p>
-          Matrix view of condition groups by age group, with colour encoding for proportion,
-          tooltip inspection, and sorting interaction.
-        </p>
-        <span class="tag">Heatmap + Tooltip + Sort</span>
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Assignment 3 – Visualisations</h1>
+      <p class="hero-sub">
+        Home page linking to the two interactive D3 visualisations.
+      </p>
+    </section>
+
+    <!-- Cards -->
+    <section class="card-grid" aria-label="Visualisations">
+      <!-- ABS -->
+      <a class="viz-card" href="./abs_index.html">
+        <div class="viz-card-content">
+          <h2>ABS Long-term Conditions (Heatmap)</h2>
+          <p>
+            Matrix view of condition groups by age group, with colour encoding for
+            proportion, tooltip inspection, and sorting interaction.
+          </p>
+
+          <div class="chips">
+            <span class="chip">Heatmap</span>
+            <span class="chip">Tooltip</span>
+            <span class="chip">Sort</span>
+          </div>
+        </div>
+
+        <div class="viz-card-cta">
+          <span class="cta-text">Open ABS Heatmap</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </div>
       </a>
 
-      <a class="card" href="oecd_index.html">
-        <h2>OECD Life Expectancy (Line Chart)</h2>
-        <p>
-          Time-series showing life expectancy trend over time, with point markers and
-          hover guideline + tooltip for precise values.
-        </p>
-        <span class="tag">Line Chart + Tooltip</span>
+      <!-- OECD -->
+      <a class="viz-card" href="./oecd_index.html">
+        <div class="viz-card-content">
+          <h2>OECD Life Expectancy (Line Chart)</h2>
+          <p>
+            Time-series showing life expectancy trend over time, with point markers and hover
+            guideline + tooltip for precise values.
+          </p>
+
+          <div class="chips">
+            <span class="chip">Line chart</span>
+            <span class="chip">Tooltip</span>
+            <span class="chip">Guideline</span>
+          </div>
+        </div>
+
+        <div class="viz-card-cta">
+          <span class="cta-text">Open OECD Line Chart</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </div>
       </a>
+    </section>
+
+    <!-- Optional: quick “How to use” strip -->
+    <section class="how-strip" aria-label="How to use">
+      <div class="how-item">
+        <strong>Inspect</strong>
+        <span>Hover for tooltips and exact values.</span>
+      </div>
+      <div class="how-item">
+        <strong>Explore</strong>
+        <span>Compare age groups (ABS) and trends over time (OECD).</span>
+      </div>
+      <div class="how-item">
+        <strong>Interact</strong>
+        <span>Use sorting and hover guidelines to reveal structure.</span>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-line"></div>
+      <div class="footer-text">
+        <div>COS30045 Data Visualisation</div>
+        <div>Reuben Lim &amp; Clarice Shim | 103610729 &amp; 102788227</div>
+      </div>
     </div>
-  </main>
-
-  <footer class="page footer">
-    COS30045 Data Visualisation<br />
-    Reuben Lim & Clarice Shim| 103610729 & 102788227
   </footer>
+
+  </main>
 </body>
 </html>

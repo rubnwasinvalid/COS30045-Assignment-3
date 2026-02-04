@@ -95,18 +95,39 @@ d3.csv(DATA_FILE, d => ({
       .attr("width", x.bandwidth())
       .attr("height", y.bandwidth())
       .attr("fill", d => color(d.proportion))
-      .on("mousemove", (event, d) => {
+      .on("mouseover", function (event, d) {
+        // Optional: highlight the hovered tile
+        d3.select(this)
+          .attr("stroke", "rgba(0,0,0,0.35)")
+          .attr("stroke-width", 1.5);
+
         tooltip
           .style("opacity", 1)
           .html(`
             <div><strong>Condition:</strong> ${escapeHtml(d.condition_group)}</div>
             <div><strong>Age group:</strong> ${escapeHtml(d.age_group)}</div>
-            <div><strong>Proportion:</strong> ${d.proportion}</div>
-          `)
-          .style("left", (event.pageX + 12) + "px")
-          .style("top", (event.pageY + 12) + "px");
+            <div><strong>Proportion:</strong> ${d.proportion.toFixed(1)}%</div>
+          `);
       })
-      .on("mouseout", () => tooltip.style("opacity", 0))
+      .on("mousemove", function (event) {
+        const pad = 12;
+        const tt = tooltip.node();
+        const ttW = tt ? tt.offsetWidth : 0;
+        const ttH = tt ? tt.offsetHeight : 0;
+
+        const xPos = Math.min(event.pageX + pad, window.scrollX + window.innerWidth - ttW - pad);
+        const yPos = Math.min(event.pageY + pad, window.scrollY + window.innerHeight - ttH - pad);
+
+        tooltip.style("left", xPos + "px").style("top", yPos + "px");
+      })
+      .on("mouseout", function () {
+        // Remove highlight
+        d3.select(this)
+          .attr("stroke", "none")
+          .attr("stroke-width", null);
+
+        tooltip.style("opacity", 0);
+      })
       .merge(tiles)
       .transition()
       .duration(450)

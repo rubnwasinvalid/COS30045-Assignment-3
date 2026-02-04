@@ -8,33 +8,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ABS Long-term Conditions – Heatmap</title>
 
-  <!-- CSS is in the SAME folder (pages/) -->
   <link rel="stylesheet" href="styles.css" />
-
   <script src="https://d3js.org/d3.v6.min.js"></script>
 </head>
 
-<body>
-  <header class="page">
-    <h1>ABS Long-term Conditions</h1>
-    <p class="sub">
-      Heatmap showing <strong>proportion</strong> of long-term conditions across <strong>age groups</strong>.
-      Hover a tile to see exact values.
-    </p>
+<body class="viz-page">
+  <!-- Tooltip MUST be inside body -->
+  <div id="tooltip" class="tooltip" style="opacity: 0;"></div>
 
-    <div class="controls">
-      <button id="sortBtn" type="button">Sort conditions by total (descending)</button>
-      <span class="hint">Sorting helps highlight the most prevalent conditions.</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Home">
+        <span class="brand-badge">DV</span>
+        <span class="brand-text">
+          <strong>COS30045</strong>
+          <span>Assignment 3 — Visualisation Website</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link nav-link-active" href="./abs_index.html">ABS Heatmap</a>
+        <a class="nav-link" href="./oecd_index.html">OECD Line Chart</a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="page">
+    <div class="container">
+      <h1>ABS Long-term Conditions</h1>
+      <p class="sub">
+        Heatmap showing <strong>proportion</strong> of long-term conditions across <strong>age groups</strong>.
+        Hover a tile to see exact values.
+      </p>
+
+      <div class="controls viz-controls">
+        <button id="sortBtn" type="button">Sort conditions by total (descending)</button>
+        <span class="hint">Sorting helps highlight the most prevalent conditions.</span>
+      </div>
     </div>
   </header>
 
   <main class="page">
-    <div id="chart"></div>
+    <div class="chart-wrap">
+      <div id="chart"></div>
+    </div>
   </main>
 
-  <footer class="page footer">
-    COS30045 Data Visualisation<br />
-    Reuben Lim & Clarice Shim| 103610729 & 102788227
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-line"></div>
+      <div class="footer-text">
+        <div>COS30045 Data Visualisation</div>
+        <div>Reuben Lim &amp; Clarice Shim | 103610729 &amp; 102788227</div>
+      </div>
+    </div>
   </footer>
 
   <script src="abs_script.js"></script>

@@ -15,21 +15,49 @@
 </head>
 
 <body>
+  <!-- Top bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Home">
+        <span class="brand-badge">DV</span>
+        <span class="brand-text">
+          <strong>COS30045</strong>
+          <span>Assignment 3 — Visualisation Website</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./abs_index.html">ABS Heatmap</a>
+        <a class="nav-link nav-link-active" href="./oecd_index.html">OECD Line Chart</a>
+      </nav>
+    </div>
+  </header>
+
   <header class="page">
-    <h1>OECD Life Expectancy (Australia)</h1>
-    <p class="sub">
-      Time-series line chart of <strong>life expectancy</strong> (value) by <strong>year</strong>.
-      Hover to see the exact value.
-    </p>
+    <div class="container">
+      <h1>OECD Life Expectancy (Australia)</h1>
+      <p class="sub">
+        Time-series line chart of <strong>life expectancy</strong> (value) by <strong>year</strong>.
+        Hover to see the exact value.
+      </p>
+    </div>
   </header>
 
   <main class="page">
-    <div id="chart"></div>
+    <div class="container">
+      <div id="chart"></div>
+    </div>
   </main>
 
-  <footer class="page footer">
-    COS30045 Data Visualisation<br />
-    Reuben Lim & Clarice Shim | 103610729 & 102788227
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-line"></div>
+      <div class="footer-text">
+        <div>COS30045 Data Visualisation</div>
+        <div>Reuben Lim &amp; Clarice Shim | 103610729 &amp; 102788227</div>
+      </div>
+    </div>
   </footer>
 
   <!-- JS is in the SAME folder (pages/) -->
