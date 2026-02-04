@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="COS30045 Assignment 3 - Visualisation Website" />
+
+  <!-- Make it read like a real site (not "Assignment 3") -->
+  <meta name="description" content="Interactive visual analysis of population health outcomes in Australia, exploring life expectancy trends and long-term health conditions using ABS and OECD data." />
   <meta name="author" content="Reuben Lim, Clarice Shim" />
-  <title>Assignment 3 – Visualisations</title>
+  <title>Exploring Population Health Outcomes in Australia</title>
 
   <!-- pages/ -> root -->
   <link rel="stylesheet" href="styles.css" />
@@ -18,8 +20,8 @@
       <a class="brand" href="./index.html" aria-label="Home">
         <span class="brand-badge">DV</span>
         <span class="brand-text">
-          <strong>COS30045</strong>
-          <span>Assignment 3 — Visualisation Website</span>
+          <strong>Exploring Population Health Outcomes in Australia</strong>
+          <span>Trends in life expectancy and long-term health conditions using Australian and OECD data.</span>
         </span>
       </a>
 
@@ -33,11 +35,29 @@
 
   <main class="container">
     <!-- Hero -->
-    <section class="hero">
-      <h1>Assignment 3 – Visualisations</h1>
+    <section class="hero" aria-label="Overview">
+      <h1>Population Health at a Glance</h1>
       <p class="hero-sub">
-        Home page linking to the two interactive D3 visualisations.
+        This site provides two interactive views that help explore how Australia’s health outcomes vary
+        across <strong>age groups</strong> and change over <strong>time</strong>. Use the visualisations below to
+        inspect values, compare patterns, and identify differences between population groups.
       </p>
+
+      <!-- Optional: tighter “what you’ll learn” bullets without feeling like a class project -->
+      <div class="how-strip" aria-label="Key questions">
+        <div class="how-item">
+          <strong>How is Australia changing over time?</strong>
+          <span>Track life expectancy trends year-by-year to observe shifts and disruptions.</span>
+        </div>
+        <div class="how-item">
+          <strong>Which conditions are most prevalent?</strong>
+          <span>Compare long-term condition groups across age brackets to reveal concentration.</span>
+        </div>
+        <div class="how-item">
+          <strong>What differences appear by age?</strong>
+          <span>Identify which conditions rise sharply in older cohorts and which are consistent.</span>
+        </div>
+      </div>
     </section>
 
     <!-- Cards -->
@@ -45,21 +65,22 @@
       <!-- ABS -->
       <a class="viz-card" href="./abs_index.html">
         <div class="viz-card-content">
-          <h2>ABS Long-term Conditions (Heatmap)</h2>
+          <h2>Long-term Conditions by Age (ABS Heatmap)</h2>
           <p>
-            Matrix view of condition groups by age group, with colour encoding for
-            proportion, tooltip inspection, and sorting interaction.
+            A matrix heatmap comparing <strong>condition groups</strong> across <strong>age groups</strong>.
+            Colour intensity represents the proportion for each condition–age pairing, with hover tooltips for exact values
+            and a sort control to surface the most prevalent conditions.
           </p>
 
-          <div class="chips">
+          <div class="chips" aria-label="Features">
             <span class="chip">Heatmap</span>
             <span class="chip">Tooltip</span>
-            <span class="chip">Sort</span>
+            <span class="chip">Sort by total</span>
           </div>
         </div>
 
         <div class="viz-card-cta">
-          <span class="cta-text">Open ABS Heatmap</span>
+          <span class="cta-text">Explore ABS conditions</span>
           <span class="cta-arrow" aria-hidden="true">→</span>
         </div>
       </a>
@@ -67,52 +88,58 @@
       <!-- OECD -->
       <a class="viz-card" href="./oecd_index.html">
         <div class="viz-card-content">
-          <h2>OECD Life Expectancy (Line Chart)</h2>
+          <h2>Life Expectancy Trend (OECD Line Chart)</h2>
           <p>
-            Time-series showing life expectancy trend over time, with point markers and hover
-            guideline + tooltip for precise values.
+            A time-series line chart showing life expectancy for Australia over multiple years.
+            Hover interaction reveals exact values at each point, helping you compare changes over time and
+            spot periods of rapid movement or stabilisation.
           </p>
 
-          <div class="chips">
-            <span class="chip">Line chart</span>
+          <div class="chips" aria-label="Features">
+            <span class="chip">Time series</span>
             <span class="chip">Tooltip</span>
-            <span class="chip">Guideline</span>
+            <span class="chip">Hover guideline</span>
           </div>
         </div>
 
         <div class="viz-card-cta">
-          <span class="cta-text">Open OECD Line Chart</span>
+          <span class="cta-text">Explore life expectancy</span>
           <span class="cta-arrow" aria-hidden="true">→</span>
         </div>
       </a>
     </section>
 
-    <!-- Optional: quick “How to use” strip -->
-    <section class="how-strip" aria-label="How to use">
+    <!-- Data sources + notes (legit website feel, but still concise) -->
+    <section class="how-strip" aria-label="Data and notes">
       <div class="how-item">
-        <strong>Inspect</strong>
-        <span>Hover for tooltips and exact values.</span>
+        <strong>Data sources</strong>
+        <span>
+          ABS long-term conditions dataset (processed into tidy format) and OECD life expectancy data for Australia.
+        </span>
       </div>
       <div class="how-item">
-        <strong>Explore</strong>
-        <span>Compare age groups (ABS) and trends over time (OECD).</span>
+        <strong>How to use</strong>
+        <span>
+          Hover for exact values; use sorting on the heatmap to rank condition prevalence; use the line chart to track change over time.
+        </span>
       </div>
       <div class="how-item">
-        <strong>Interact</strong>
-        <span>Use sorting and hover guidelines to reveal structure.</span>
+        <strong>Interpretation note</strong>
+        <span>
+          Visualisations support exploration and comparison; patterns should be interpreted in context of collection methods and time coverage.
+        </span>
       </div>
     </section>
 
     <footer class="site-footer">
-    <div class="container">
-      <div class="footer-line"></div>
-      <div class="footer-text">
-        <div>COS30045 Data Visualisation</div>
-        <div>Reuben Lim &amp; Clarice Shim | 103610729 &amp; 102788227</div>
+      <div class="container">
+        <div class="footer-line"></div>
+        <div class="footer-text">
+          <div>Data Visualisation Project</div>
+          <div>Reuben Lim &amp; Clarice Shim | 103610729 &amp; 102788227</div>
+        </div>
       </div>
-    </div>
-  </footer>
-
+    </footer>
   </main>
 </body>
 </html>
